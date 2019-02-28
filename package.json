@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node ./src/index.ts --extensions '.ts'",
+    "graph": "babel-node ./src/graph/index.ts --extensions '.ts'",
     "heap": "babel-node ./src/heap/index.ts --extensions '.ts'",
     "test": "npm -v"
   },

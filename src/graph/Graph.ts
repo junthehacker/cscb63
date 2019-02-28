@@ -18,6 +18,17 @@ export default class Graph {
         }
     }
 
+    static depthFirstSearchRecursive(graph, node, visited = {}) {
+        // Visit the first node
+        visited[node] = true;
+        console.log(node.value);
+        for(let w of node.adjacentNodes) {
+            if(!visited[w]) {
+                Graph.depthFirstSearchRecursive(graph, w, visited);
+            }
+        }
+    }
+
     static breadthFirstSearch(graph, node) {
         let visited = {};
         let queue = [];
